@@ -22,8 +22,8 @@ def main():
             # Make the move and check if any tile was moved/merged
             changed = game.make_move(move)
             if changed:
-                game.new_tile()  # Add a new tile if the board changed
-                game.print_board()  # Print updated board
+                game.new_tile()
+                game.print_board()
 
                 # Check for win condition
                 if game.check_win():

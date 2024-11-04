@@ -18,8 +18,7 @@ class Game2048:
     def print_board(self):
         """Print the current state of the board."""
         for row in self.board:
-            print("\t".join(str(val) if val != 0 else "." for val in row))
-        print()
+            print(row)
 
     def make_move(self, direction):
         """Process a move in the specified direction."""
