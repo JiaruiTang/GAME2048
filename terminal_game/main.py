@@ -27,13 +27,46 @@ def main():
 
                 # Check for win condition
                 if game.check_win():
-                    print("Win!")
-                    break
+                    valid_input = False
+                
+                    while not valid_input:
+                        end_action = input("Win! Restart (r) or end the game (q): ").lower()
+                        try:
+                            if end_action not in ['r', 'q']:
+                                raise ValueError("Invalid action. Please enter r or q.")
+                        except:
+                            print(e)
+                        else:
+                            valid_input = True
+                        
+                    
+                    if end_action == 'q':
+                        break
+                    else:
+                        game = Game2048()
+                        game.print_board()
 
                 # Check for game over condition
                 if game.check_game_over():
-                    print("Game Over!")
-                    break
+                    valid_input = False
+                
+                    while not valid_input:
+                        end_action = input("Game Over! Restart (r) or end the game (q): ").lower()
+                        try:
+                            if end_action not in ['r', 'q']:
+                                raise ValueError("Invalid action. Please enter r or q.")
+                        except:
+                            print(e)
+                        else:
+                            valid_input = True
+                    
+                    
+                    if end_action == 'q':
+                        break
+                    else:
+                        game = Game2048()
+                        game.print_board()
+
             else:
                 print("Move not possible in that direction.")
 

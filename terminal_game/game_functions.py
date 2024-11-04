@@ -116,4 +116,3 @@ class Game2048:
                 if j < self.size - 1 and self.board[i][j] == self.board[i][j + 1]:
                     return False
         return True
-
