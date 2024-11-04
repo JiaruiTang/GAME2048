@@ -34,12 +34,11 @@ def main():
                         try:
                             if end_action not in ['r', 'q']:
                                 raise ValueError("Invalid action. Please enter r or q.")
-                        except:
+                        except Exception as e:
                             print(e)
                         else:
                             valid_input = True
                         
-                    
                     if end_action == 'q':
                         break
                     else:
@@ -55,11 +54,10 @@ def main():
                         try:
                             if end_action not in ['r', 'q']:
                                 raise ValueError("Invalid action. Please enter r or q.")
-                        except:
+                        except Exception as e:
                             print(e)
                         else:
                             valid_input = True
-                    
                     
                     if end_action == 'q':
                         break
