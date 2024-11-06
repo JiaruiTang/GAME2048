@@ -46,6 +46,7 @@ class Game2048:
                     changed = True
         return changed
 
+
     def move_down(self):
         """Move all tiles down and merge as needed."""
         changed = False
@@ -58,6 +59,8 @@ class Game2048:
                     self.board[row][col] = merged_tiles[row]
                     changed = True
         return changed
+    
+        
 
     def move_left(self):
         """Move all tiles to the left and merge as needed."""
